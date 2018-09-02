@@ -16,6 +16,9 @@
     display: -ms-flexbox !important;
     display: flex !important;
   }
+  .container {
+    padding: 40px 10px;
+  }
   .my-name {
     padding-left: 10px;
   }
@@ -36,8 +39,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transition: .5s !important;
-    transition: .5s !important;
+    -webkit-transition: .4s !important;
+    transition: .4s !important;
   }
   .active {
     right: 0 !important;

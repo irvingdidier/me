@@ -179,14 +179,21 @@ $width: 5.75em;
     color: $color-primary;
 }
 
-.skills, .experience, .portafolio, .contact {
+.container {
     padding: 40px 70px;
+}
+
+.skills, .experience, .portafolio, .contact {
     width: 100%;
 }
 
+/*************************** START Skills ***************************/
+
 .skills .list {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+    grid-gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -221,10 +228,11 @@ $width: 5.75em;
 }
 
 
+/*************************** END Skills ***************************/
 
 
 
-
+/*************************** START menu ***************************/
 
 .container-menu {
     width: 100%;
@@ -258,3 +266,5 @@ $width: 5.75em;
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+/*************************** END menu ***************************/

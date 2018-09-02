@@ -233,16 +233,22 @@ a:hover {
   color: #3b679e;
 }
 
-.skills, .experience, .portafolio, .contact {
+.container {
   padding: 40px 70px;
+}
+
+.skills, .experience, .portafolio, .contact {
   width: 100%;
 }
 
+/*************************** START Skills ***************************/
 .skills .list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 180px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+  grid-gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -285,6 +291,8 @@ a:hover {
   font-size: 1.1em;
 }
 
+/*************************** END Skills ***************************/
+/*************************** START menu ***************************/
 .container-menu {
   width: 100%;
   display: -webkit-box !important;
@@ -326,4 +334,6 @@ a:hover {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
+
+/*************************** END menu ***************************/
 /*# sourceMappingURL=index.css.map */
