@@ -53,6 +53,8 @@ body {
     }
 } 
 
+/*************************** START nav ***************************/
+
 .navbar {
     position: fixed;
     top: 0;
@@ -63,54 +65,99 @@ body {
     flex-wrap: nowrap;
     z-index: 2;
     display: flex;
+
+    .my-name {
+        flex-grow: 1;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        li:first-child {
+            flex: 2;
+        }
+
+        li {
+            flex: 1;
+            list-style: none;
+            text-align: center;
+        }
+    }
 }
-  
-.navbar a {
-    text-decoration: none;
-    color: white;
+
+/*************************** END nav ***************************/
+
+/*************************** START menu ***************************/
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+    display: none;
 }
+
+.btn-menu {
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*************************** END menu ***************************/
 
 a:hover {
     color: $color-third;
     font-size: 1.02em;
 }
 
-.navbar .menu {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.navbar .menu li:first-child {
-    flex: 2;
-}
-
-.navbar .menu li {
-    flex: 1;
-    list-style: none;
-    text-align: center;
-}
-
 /*************************** START typewritter ***************************/
-$width: 5.75em;
+$width: 9em;
 
 .line-1{
-  width: $width;
-  border-right: 2px solid rgba(255,255,255,.75);
-  white-space: nowrap;
-  overflow: hidden;
+    width: $width;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* Animation */
+    &.anim-typewriter {
+        animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+    }
 }
 
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 1.5s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
-}
 @keyframes typewriter{
   from{width: 0;}
   to{width: $width;}
@@ -121,33 +168,42 @@ $width: 5.75em;
 }
 
 /*************************** END typewritter ***************************/
-
-.hero {
+.background-colorfull {
     background: #3b679e; /* Old browsers */
     background: -moz-linear-gradient(left, #3b679e 0%, #2b88d9 57%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
-    height: 600px;
     color: white;
+}
+
+.hero {
+    height: 600px;
     display: flex;
     padding: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    .hero-container {
+        margin-top: 64px;
+
+        p:first-child {
+            margin: 0 auto;
+        }
+    }
+
+    .front {
+        color: yellow;
+    }
+
+    .back {
+        color: #ff007f;
+    }
 }
 
 .my-name {
-    width: 7em;
-    font-size: 1.3em;
-    flex-grow: auto;
-    display: flex;
-    align-content: center;
-    align-items: center;
-}
-
-.my-name p {
-    margin: auto auto;
+    margin-left: 10px;
 }
 
 .feet {
@@ -177,6 +233,7 @@ $width: 5.75em;
 
 .title {
     color: $color-primary;
+    margin: 40px 0;
 }
 
 .container {
@@ -189,15 +246,16 @@ $width: 5.75em;
 
 /*************************** START Skills ***************************/
 
-.skills .list {
+.list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 180px));
+    grid-template-rows: repeat(2, minmax(190px, 210px));
     grid-gap: 20px;
-    flex-wrap: wrap;
 }
 
-.skills .list .skill {
+.skill {
+    position: relative;
     width: 180px;
     height: 210px;
     border: 1px solid grey;
@@ -206,6 +264,24 @@ $width: 5.75em;
     margin-right: 20px;
     margin-bottom: 20px;
     box-shadow: 1px 1px 1px 1px rgba(91, 91, 91, .5);
+}
+
+.resume-overlay {
+    position: absolute;
+    background: rgba(1, 1, 1, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.skill:hover .resume-overlay {
+    display: flex;
 }
 
 .skills .list .skill .img-skill {
@@ -230,41 +306,3 @@ $width: 5.75em;
 
 /*************************** END Skills ***************************/
 
-
-
-/*************************** START menu ***************************/
-
-.container-menu {
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 15px;
-    display: none !important;
-}
-
-.btn-menu {
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-/*************************** END menu ***************************/
