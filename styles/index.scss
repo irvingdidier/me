@@ -6,6 +6,10 @@ $color-third: #2A82CB;
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     margin: 0;
     font-size: 1.1rem;
@@ -53,7 +57,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(1, 1, 1, 0.7);
+    background: rgba(1, 1, 1, 0.9);
     color: white;
     height: 64px;
     flex-wrap: nowrap;
@@ -71,7 +75,7 @@ a:hover {
     font-size: 1.02em;
 }
 
-.navbar ul {
+.navbar .menu {
     width: 80%;
     height: 100%;
     margin: 0 auto;
@@ -82,11 +86,11 @@ a:hover {
     justify-content: flex-end;
 }
 
-.navbar ul li:first-child {
+.navbar .menu li:first-child {
     flex: 2;
 }
 
-.navbar ul li {
+.navbar .menu li {
     flex: 1;
     list-style: none;
     text-align: center;
