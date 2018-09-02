@@ -1,0 +1,23 @@
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  .navbar ul li:first-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar ul {
+    display: none;
+  }
+  .container-menu {
+    display: block !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
