@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
@@ -117,6 +118,10 @@ body h6 {
   text-align: center;
 }
 
+i {
+  width: 100% !important;
+}
+
 /*************************** END nav ***************************/
 /*************************** START menu ***************************/
 .container-menu {
@@ -181,8 +186,8 @@ a:hover {
 }
 
 .line-1.anim-typewriter {
-  -webkit-animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
-          animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  -webkit-animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+          animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
 
 @-webkit-keyframes typewriter {
@@ -240,7 +245,6 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -248,6 +252,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .hero .hero-container {
@@ -297,7 +302,7 @@ a:hover {
 
 .title {
   color: #3b679e;
-  margin: 40px 0;
+  margin: 80px 0;
 }
 
 .container {
@@ -324,6 +329,7 @@ a:hover {
 }
 
 .skill {
+  overflow: hidden;
   position: relative;
   width: 180px;
   height: 210px;
@@ -350,6 +356,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5em;
+  overflow: hidden;
 }
 
 .skill:hover .resume-overlay {
@@ -362,6 +369,7 @@ a:hover {
   width: 80%;
   margin: 0 auto;
   height: 160px;
+  overflow: hidden;
 }
 
 .skills .list .skill .img-skill img {
@@ -389,9 +397,9 @@ a:hover {
 .portafolio .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 550px))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 550px));
-  grid-auto-rows: minmax(200px, 500px);
+  -ms-grid-columns: (minmax(500px, 700px))[2];
+      grid-template-columns: repeat(2, minmax(500px, 700px));
+  grid-auto-rows: 500px;
   grid-gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -423,6 +431,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .portafolio .content .content-portafolio .image-siteweb {
@@ -457,6 +466,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .portafolio .content .content-portafolio .info-siteweb .badge {
@@ -469,4 +479,179 @@ a:hover {
 }
 
 /*************************** END Portafolio ***************************/
+/*************************** START Contact ***************************/
+.contact .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .content .about {
+  width: 40%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contact .content .about img {
+  border: 1px solid gray;
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.contact .content .about .name {
+  margin: 5px auto;
+  font-size: 1.15em;
+}
+
+.contact .content .about .career {
+  margin-top: 0;
+  color: #3b679e;
+}
+
+.contact .content .about .bio {
+  margin-top: 0;
+  font-size: .9em;
+  color: gray;
+  text-align: center;
+}
+
+.contact .content .contacts {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contact .content .contacts h4 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .content .contacts .networks {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: auto 20px !important;
+  -webkit-box-align: space-between !important;
+      -ms-flex-align: space-between !important;
+          align-items: space-between !important;
+}
+
+.contact .content .contacts .networks .item {
+  border: 1px solid gray;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+  width: 55px;
+  height: 55px;
+  margin: auto 20px;
+}
+
+.contact .content .contacts .networks .item.telegram a, .contact .content .contacts .networks .item.linkedin a, .contact .content .contacts .networks .item.twitter a, .contact .content .contacts .networks .item.github a {
+  color: black;
+}
+
+.contact .content .contacts .networks .item.telegram:hover {
+  background: #0088cc;
+  border: none;
+}
+
+.contact .content .contacts .networks .item.telegram:hover a {
+  color: white;
+  font-size: 1em;
+}
+
+.contact .content .contacts .networks .item.linkedin:hover {
+  background: #0077b5;
+  border: none;
+}
+
+.contact .content .contacts .networks .item.linkedin:hover a {
+  color: white;
+  font-size: 1em;
+}
+
+.contact .content .contacts .networks .item.twitter:hover {
+  background: #1da1f2;
+  border: none;
+}
+
+.contact .content .contacts .networks .item.twitter:hover a {
+  color: white;
+  font-size: 1em;
+}
+
+.contact .content .contacts .networks .item.github:hover {
+  background: #000000;
+  border: none;
+}
+
+.contact .content .contacts .networks .item.github:hover a {
+  color: white;
+  font-size: 1em;
+}
+
+/*************************** END Contact ***************************/
+/*************************** START Footer ***************************/
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  font-size: .8em;
+  color: white;
+  background: black;
+}
+
+.footer .heart {
+  color: red;
+}
+
+/*************************** END Footer ***************************/
 /*# sourceMappingURL=index.css.map */

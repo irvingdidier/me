@@ -4,6 +4,7 @@ $color-third: #2A82CB;
 
 * {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html {
@@ -100,6 +101,10 @@ body {
     }
 }
 
+i {
+    width: 100% !important;
+}
+
 /*************************** END nav ***************************/
 
 /*************************** START menu ***************************/
@@ -159,7 +164,7 @@ $width: 11.3em;
 
     /* Animation */
     &.anim-typewriter {
-        animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+        animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
     }
 }
 
@@ -185,10 +190,10 @@ $width: 11.3em;
 .hero {
     height: 600px;
     display: flex;
-    padding: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 
     .hero-container {
         margin-top: 64px;
@@ -238,7 +243,7 @@ $width: 11.3em;
 
 .title {
     color: $color-primary;
-    margin: 40px 0;
+    margin: 80px 0;
 }
 
 .container {
@@ -262,6 +267,7 @@ $width: 11.3em;
 }
 
 .skill {
+    overflow: hidden;
     position: relative;
     width: 180px;
     height: 210px;
@@ -283,6 +289,7 @@ $width: 11.3em;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    overflow: hidden;
 }
 
 .skill:hover .resume-overlay {
@@ -293,6 +300,7 @@ $width: 11.3em;
     width: 80%;
     margin: 0 auto;
     height: 160px;
+    overflow: hidden;
 }
 .skills .list .skill .img-skill img {
     width: 100%;
@@ -317,8 +325,8 @@ $width: 11.3em;
 
     .content {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 550px));
-        grid-auto-rows: minmax(200px, 500px);
+        grid-template-columns: repeat(2, minmax(500px, 700px));
+        grid-auto-rows: 500px;
         grid-gap: 30px;
         justify-content: center;
 
@@ -335,6 +343,7 @@ $width: 11.3em;
                 padding: 10px;
                 justify-content: flex-start;
                 align-items: center;
+                overflow: hidden;
             }
 
             .image-siteweb {
@@ -357,6 +366,7 @@ $width: 11.3em;
                 padding: 10px;
                 justify-content: flex-start;
                 align-items: center;
+                overflow: hidden;
 
                 .badge {
                     border: 1px solid grey;
@@ -373,3 +383,144 @@ $width: 11.3em;
 
 /*************************** END Portafolio ***************************/
 
+/*************************** START Contact ***************************/
+
+.contact {
+
+    .content {
+        display: flex;
+
+        .about {
+            // border: 1px solid blue;
+            width: 40%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;            
+
+            img {
+                border: 1px solid gray;
+                width: 50%;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+
+            .name {
+                margin: 5px auto;
+                font-size: 1.15em;
+            }
+
+            .career {
+                margin-top: 0;
+                color: $color-primary;
+            }
+
+            .bio {
+                margin-top: 0;
+                font-size: .9em;
+                color: gray;
+                text-align: center;
+            }
+        }
+
+        .contacts {
+            // border: 1px solid blue;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h4 {
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .networks {
+                margin-top: 30px;
+                display: flex;
+                padding: auto 20px !important;
+                align-items: space-between !important;
+            
+                .item {
+                    border: 1px solid gray;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2em;
+                    width: 55px;
+                    height: 55px;
+                    margin: auto 20px;
+
+                    &.telegram a, &.linkedin a, &.twitter a, &.github a {
+                        color: black;
+                    }
+
+                    &.telegram:hover {
+                        background: #0088cc;
+                        border: none;
+                        a {
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+
+                    &.linkedin:hover {
+                        background: #0077b5;
+                        border: none;
+                        a {
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+
+                    &.twitter:hover {
+                        background: #1da1f2;
+                        border: none;
+                        a {
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+
+                    &.github:hover {
+                        background: #000000;
+                        border: none;
+                        a {
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*************************** END Contact ***************************/
+
+/*************************** START Footer ***************************/
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    font-size: .8em;
+    color: white;
+    background: black;
+
+    .heart {
+        color: red;
+    }
+}
+
+/*************************** END Footer ***************************/
