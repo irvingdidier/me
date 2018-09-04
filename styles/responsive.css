@@ -107,6 +107,12 @@
   .contact .content .about img {
     width: 50%;
   }
+  .contact .content .contacts a {
+    font-size: .85em;
+  }
+  .contact .content .contacts .networks .item {
+    margin: auto 15px;
+  }
   .portafolio .content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
