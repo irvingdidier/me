@@ -112,7 +112,7 @@ body {
     display: none;
 }
 
-.btn-menu {
+.btn-menu, .pointer {
     cursor: pointer;
 }
 
@@ -138,13 +138,18 @@ body {
 
 /*************************** END menu ***************************/
 
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
 a:hover {
     color: $color-third;
     font-size: 1.02em;
 }
 
 /*************************** START typewritter ***************************/
-$width: 9em;
+$width: 11.3em;
 
 .line-1{
     width: $width;
@@ -250,8 +255,10 @@ $width: 9em;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 180px));
-    grid-template-rows: repeat(2, minmax(190px, 210px));
+    justify-content: center;
+    grid-auto-rows: minmax(190px, 210px);
     grid-gap: 20px;
+    margin-bottom: 80px;
 }
 
 .skill {
@@ -260,14 +267,12 @@ $width: 9em;
     height: 210px;
     border: 1px solid grey;
     border-radius: 5px;
-    margin-top: 40px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     box-shadow: 1px 1px 1px 1px rgba(91, 91, 91, .5);
 }
 
 .resume-overlay {
     position: absolute;
+    border-radius: 4px;
     background: rgba(1, 1, 1, 0.7);
     top: 0;
     left: 0;
@@ -305,4 +310,66 @@ $width: 9em;
 
 
 /*************************** END Skills ***************************/
+
+/*************************** START Portafolio ***************************/
+
+.portafolio {
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 550px));
+        grid-auto-rows: minmax(200px, 500px);
+        grid-gap: 30px;
+        justify-content: center;
+
+        .content-portafolio {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+            .title-siteweb {
+                width: 100%;
+                height: 13%;
+                display: flex;
+                padding: 10px;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .image-siteweb {
+                width: 100%;
+                height: 74%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .info-siteweb {
+                width: 100%;
+                height: 13%;
+                display: flex;
+                padding: 10px;
+                justify-content: flex-start;
+                align-items: center;
+
+                .badge {
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                    color: grey;
+                    font-size: .75em;
+                    padding: 5px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*************************** END Portafolio ***************************/
 

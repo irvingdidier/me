@@ -10,3 +10,7 @@ function hideMenu() {
     bntMenu.classList.remove('change');
     menu.classList.remove('active');
 }
+
+function goTo(url) {
+    window.open(url);
+}

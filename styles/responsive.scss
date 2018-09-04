@@ -25,24 +25,26 @@
         color: white;
         position: fixed;
         right: -100% !important;
+        left: 100%;
         top: 64px;
-        flex-grow: 1;
         bottom: 0;
+        flex-grow: 1;
         display: flex !important;
         width: 100% !important;
         margin: 0 !important;
-        height: auto !important;
+        height: 100%;
         flex-direction: column;
         transition: .4s !important;
+        overflow: hidden;
     }
 
     .active {
+        left: 0;
         right: 0 !important;
     }
 
     .menu li {
         font-size: 1.4em;
-        flex: 1 !important;
     }
 
 }
