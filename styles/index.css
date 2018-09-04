@@ -479,11 +479,35 @@ a:hover {
 }
 
 /*************************** END Portafolio ***************************/
+/*************************** START Experience ***************************/
+.experience .content .card-experience {
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.experience .content .card-experience .year {
+  font-size: .7em;
+  margin: 0;
+  color: gray;
+}
+
+.experience .content .card-experience h6 {
+  color: #2A82CB;
+  margin: 0 auto;
+}
+
+.experience .content .card-experience p {
+  margin-top: 20px;
+  color: #3b679e;
+}
+
+/*************************** END Experience ***************************/
 /*************************** START Contact ***************************/
 .contact .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
 }
 
 .contact .content .about {
@@ -557,7 +581,7 @@ a:hover {
 }
 
 .contact .content .contacts .networks {
-  margin-top: 30px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,6 +594,16 @@ a:hover {
 .contact .content .contacts .networks .item {
   border: 1px solid gray;
   border-radius: 50px;
+  font-size: 1.2em;
+  width: 55px;
+  height: 55px;
+  margin: auto 50px;
+  position: relative;
+}
+
+.contact .content .contacts .networks .item.telegram a, .contact .content .contacts .networks .item.linkedin a, .contact .content .contacts .networks .item.twitter a, .contact .content .contacts .networks .item.github a {
+  color: black;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,14 +613,10 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2em;
-  width: 55px;
-  height: 55px;
-  margin: auto 20px;
-}
-
-.contact .content .contacts .networks .item.telegram a, .contact .content .contacts .networks .item.linkedin a, .contact .content .contacts .networks .item.twitter a, .contact .content .contacts .networks .item.github a {
-  color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .contact .content .contacts .networks .item.telegram:hover {
@@ -629,29 +659,19 @@ a:hover {
   font-size: 1em;
 }
 
-/*************************** END Contact ***************************/
-/*************************** START Footer ***************************/
-.footer {
-  margin-top: 50px;
-  width: 100%;
+.contact .content .contacts .text {
+  margin-top: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 25px;
+  text-align: center;
   font-size: .8em;
-  color: white;
-  background: black;
 }
 
-.footer .heart {
+.contact .content .contacts .text .heart {
   color: red;
+  margin: 0 10px;
 }
 
-/*************************** END Footer ***************************/
+/*************************** END Contact ***************************/
 /*# sourceMappingURL=index.css.map */

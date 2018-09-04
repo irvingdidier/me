@@ -383,12 +383,46 @@ $width: 11.3em;
 
 /*************************** END Portafolio ***************************/
 
+/*************************** START Experience ***************************/
+
+.experience {
+
+    .content {
+
+        .card-experience {
+            margin-bottom: 50px;
+            padding: 10px;
+
+            .year {
+                font-size: .7em;
+                margin: 0;
+                color: gray;
+            }
+
+            h6 {
+                color: $color-third;
+                margin: 0 auto;
+            }
+
+            p {
+                margin-top: 20px;
+                color: $color-primary;
+            }
+        }
+
+    }
+
+}
+
+/*************************** END Experience ***************************/
+
 /*************************** START Contact ***************************/
 
 .contact {
 
     .content {
         display: flex;
+        margin-bottom: 50px;
 
         .about {
             // border: 1px solid blue;
@@ -442,7 +476,7 @@ $width: 11.3em;
             }
 
             .networks {
-                margin-top: 30px;
+                margin-top: 50px;
                 display: flex;
                 padding: auto 20px !important;
                 align-items: space-between !important;
@@ -450,16 +484,22 @@ $width: 11.3em;
                 .item {
                     border: 1px solid gray;
                     border-radius: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     font-size: 1.2em;
                     width: 55px;
                     height: 55px;
-                    margin: auto 20px;
+                    margin: auto 50px;
+                    position: relative;
 
                     &.telegram a, &.linkedin a, &.twitter a, &.github a {
                         color: black;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
                     }
 
                     &.telegram:hover {
@@ -499,28 +539,20 @@ $width: 11.3em;
                     }
                 }
             }
+
+            .text {
+                margin-top: 70px;
+                display: flex;
+                text-align: center;
+                font-size: .8em;
+
+                .heart {
+                    color: red;
+                    margin: 0 10px;
+                }
+            }
         }
     }
 }
 
 /*************************** END Contact ***************************/
-
-/*************************** START Footer ***************************/
-
-.footer {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    font-size: .8em;
-    color: white;
-    background: black;
-
-    .heart {
-        color: red;
-    }
-}
-
-/*************************** END Footer ***************************/
