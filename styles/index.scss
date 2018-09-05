@@ -1,6 +1,6 @@
-$color-primary: #3b679e;
-$color-secondary: #164266;
-$color-third: #2A82CB;
+
+
+@import "lib/utils";
 
 * {
     box-sizing: border-box;
@@ -61,6 +61,7 @@ body {
     top: 0;
     width: 100%;
     background: rgba(1, 1, 1, 0.9);
+    @include box-shadow;
     color: white;
     height: 64px;
     flex-wrap: nowrap;
@@ -164,7 +165,7 @@ $width: 11em;
 
     /* Animation */
     &.anim-typewriter {
-        animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+        animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
     }
 }
 
@@ -175,6 +176,10 @@ $width: 11em;
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
+}
+
+.typewritter {
+    width: 390px;
 }
 
 /*************************** END typewritter ***************************/
@@ -229,6 +234,7 @@ $width: 11em;
     width: auto;
     padding: 10px 25px;
     margin: 5px;
+    @include box-shadow;
 }
 
 .btn:hover {
@@ -273,7 +279,7 @@ $width: 11em;
     height: 210px;
     border: 1px solid grey;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px rgba(91, 91, 91, .5);
+    @include box-shadow;
 }
 
 .resume-overlay {
@@ -335,6 +341,9 @@ $width: 11em;
             flex-direction: column;
             border-radius: 5px;
             border: 1px solid gray;
+            @include box-shadow;
+            margin-top: 5px;
+            margin-bottom: 5px;
 
             .title-siteweb {
                 width: 100%;
@@ -439,6 +448,7 @@ $width: 11em;
                 width: 50%;
                 border-radius: 50%;
                 margin-bottom: 20px;
+                @include box-shadow;
             }
 
             .name {
@@ -480,10 +490,12 @@ $width: 11em;
                 display: flex;
                 padding: auto 20px !important;
                 align-items: space-between !important;
+                padding: 7px;
             
                 .item {
-                    border: 1px solid gray;
+                    border: 1px solid rgba(181, 181, 181, 0.5);
                     border-radius: 50px;
+                    @include box-shadow;
                     font-size: 1.2em;
                     width: 55px;
                     height: 55px;

@@ -1,0 +1,7 @@
+$color-primary: #3b679e;
+$color-secondary: #164266;
+$color-third: #2A82CB;
+
+@mixin box-shadow {
+    box-shadow: 0 3px 10px 0px rgba(1, 1, 1, .4);
+}
