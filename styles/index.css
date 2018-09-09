@@ -63,7 +63,7 @@ body h6 {
   height: 64px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  z-index: 2;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,16 +234,14 @@ a:hover {
 
 /*************************** END typewritter ***************************/
 .background-colorfull {
-  background: #3b679e;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#3b679e), color-stop(57%, #2b88d9), color-stop(100%, #207cca), to(#7db9e8));
-  background: linear-gradient(to right, #3b679e 0%, #2b88d9 57%, #207cca 100%, #7db9e8 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 );
-  /* IE6-9 */
-  color: white;
+  background: #384B5D;
+  opacity: .9;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .hero {
@@ -261,8 +259,22 @@ a:hover {
   position: relative;
 }
 
+.hero .hero-background {
+  background-image: url("../assets/others/code2.jpg");
+  width: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .hero .hero-container {
   margin-top: 64px;
+  z-index: 2;
+  color: white;
 }
 
 .hero .hero-container p:first-child {

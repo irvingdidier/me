@@ -1,7 +1,17 @@
 $color-primary: #3b679e;
 $color-secondary: #164266;
 $color-third: #2A82CB;
+$color-yellow: yellow;
+$color-back : #ff007f;
 
 @mixin box-shadow {
     box-shadow: 0 3px 10px 0px rgba(1, 1, 1, .4);
+}
+
+@mixin position-absolute {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

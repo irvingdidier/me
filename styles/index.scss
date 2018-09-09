@@ -65,7 +65,7 @@ body {
     color: white;
     height: 64px;
     flex-wrap: nowrap;
-    z-index: 2;
+    z-index: 10;
     display: flex;
 
     .my-name {
@@ -184,12 +184,15 @@ $width: 11em;
 
 /*************************** END typewritter ***************************/
 .background-colorfull {
-    background: #3b679e; /* Old browsers */
-    background: -moz-linear-gradient(left, #3b679e 0%, #2b88d9 57%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
-    color: white;
+    // background: #3b679e; /* Old browsers */
+    // background: -moz-linear-gradient(left, #3b679e 0%, #2b88d9 57%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(left, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(to right, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+    background: #384B5D;
+    opacity: .9;
+    z-index: 1;
+    @include position-absolute;
 }
 
 .hero {
@@ -200,8 +203,17 @@ $width: 11em;
     text-align: center;
     position: relative;
 
+    .hero-background {
+        background-image: url('../assets/others/code2.jpg');
+        width: 100%;
+        object-fit: none;
+        @include position-absolute;
+    }
+
     .hero-container {
         margin-top: 64px;
+        z-index: 2;
+        color: white;
 
         p:first-child {
             margin: 0 auto;
@@ -209,11 +221,11 @@ $width: 11em;
     }
 
     .front {
-        color: yellow;
+        color: $color-yellow;
     }
 
     .back {
-        color: #ff007f;
+        color: $color-back;
     }
 }
 
