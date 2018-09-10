@@ -162,6 +162,8 @@ $width: 11em;
     border-right: 2px solid rgba(255,255,255,.75);
     white-space: nowrap;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Animation */
     &.anim-typewriter {
@@ -204,7 +206,7 @@ $width: 11em;
     position: relative;
 
     .hero-background {
-        background-image: url('../assets/others/code2.jpg');
+        background-image: url('../assets/others/code.jpg');
         width: 100%;
         object-fit: none;
         @include position-absolute;
@@ -390,9 +392,9 @@ $width: 11em;
                 overflow: hidden;
 
                 .badge {
-                    border: 1px solid grey;
+                    border: 1px solid $color-secondary;
                     border-radius: 5px;
-                    color: grey;
+                    color: $color-secondary;
                     font-size: .75em;
                     padding: 5px;
                     margin: 5px;

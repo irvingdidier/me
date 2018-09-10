@@ -28,13 +28,9 @@
         left: 100%;
         top: 64px;
         bottom: 0;
-        flex-grow: 1;
-        display: flex !important;
         width: 100% !important;
-        margin: 0 !important;
-        height: 100%;
         flex-direction: column;
-        transition: .4s !important;
+        transition: .4s;
         overflow: hidden;
     }
 
@@ -43,8 +39,18 @@
         right: 0 !important;
     }
 
-    .menu li {
-        font-size: 1.4em;
+    .menu {
+
+        li {
+            font-size: 1.4em;
+            flex: 1;
+            padding-top:40px;
+        }
+
+        li:first-child {
+            display: none;
+        }
+
     }
 
 }

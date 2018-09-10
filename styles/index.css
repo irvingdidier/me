@@ -184,6 +184,8 @@ a:hover {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
   /* Animation */
 }
 
@@ -260,7 +262,7 @@ a:hover {
 }
 
 .hero .hero-background {
-  background-image: url("../assets/others/code2.jpg");
+  background-image: url("../assets/others/code.jpg");
   width: 100%;
   -o-object-fit: none;
      object-fit: none;
@@ -494,9 +496,9 @@ a:hover {
 }
 
 .portafolio .content .content-portafolio .info-siteweb .badge {
-  border: 1px solid grey;
+  border: 1px solid #164266;
   border-radius: 5px;
-  color: grey;
+  color: #164266;
   font-size: .75em;
   padding: 5px;
   margin: 5px;
