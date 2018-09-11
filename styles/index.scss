@@ -513,10 +513,10 @@ $width: 11em;
                     font-size: 1.2em;
                     width: 55px;
                     height: 55px;
-                    margin: auto 50px;
+                    margin: auto 40px;
                     position: relative;
 
-                    &.telegram a, &.linkedin a, &.twitter a, &.github a {
+                    &.telegram a, &.linkedin a, &.twitter a, &.instagram a, &.github a {
                         color: black;
                         position: absolute;
                         display: flex;
@@ -548,6 +548,19 @@ $width: 11em;
 
                     &.twitter:hover {
                         background: #1da1f2;
+                        border: none;
+                        a {
+                            color: white;
+                            font-size: 1em;
+                        }
+                    }
+                    
+                    &.instagram:hover {
+                        background: #fcaf45; /* Old browsers */
+                        background: -moz-linear-gradient(45deg, #fcaf45 0%, #f77737 12%, #f56040 25%, #fd1d1d 38%, #e1306c 51%, #c13584 63%, #833ab4 76%, #5851db 88%, #405de6 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(45deg, #fcaf45 0%,#f77737 12%,#f56040 25%,#fd1d1d 38%,#e1306c 51%,#c13584 63%,#833ab4 76%,#5851db 88%,#405de6 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(45deg, #fcaf45 0%,#f77737 12%,#f56040 25%,#fd1d1d 38%,#e1306c 51%,#c13584 63%,#833ab4 76%,#5851db 88%,#405de6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcaf45', endColorstr='#405de6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
                         border: none;
                         a {
                             color: white;
