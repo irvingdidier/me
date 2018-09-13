@@ -599,25 +599,38 @@ a:hover {
   text-align: center;
 }
 
+.contact .content .contacts h4 {
+  width: 100%;
+  text-align: center;
+}
+
 .contact .content .contacts h4 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .content .contacts h4 a i {
+  width: auto !important;
+}
+
+.contact .content .contacts h4 a .far {
+  line-height: 1.6 !important;
 }
 
 .contact .content .contacts .networks {
   margin-top: 50px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: auto 20px !important;
-  -webkit-box-align: space-between !important;
-      -ms-flex-align: space-between !important;
-          align-items: space-between !important;
-  padding: 7px;
+  padding: 0 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 7px;
 }
 
 .contact .content .contacts .networks .item {
@@ -628,7 +641,7 @@ a:hover {
   font-size: 1.2em;
   width: 55px;
   height: 55px;
-  margin: auto 40px;
+  margin: auto 5px;
   position: relative;
 }
 

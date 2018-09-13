@@ -493,18 +493,30 @@ $width: 11em;
             text-align: center;
 
             h4 {
+                width: 100%;
+                text-align: center;
+
                 a {
                     display: flex;
-                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        width: auto !important;   
+                    }
+
+                    .far {
+                        line-height: 1.6 !important;
+                    }
                 }
             }
 
             .networks {
                 margin-top: 50px;
+                width: 100%;
                 display: flex;
-                padding: auto 20px !important;
-                align-items: space-between !important;
-                padding: 7px;
+                padding: 0 20px;
+                justify-content: space-around;
+                padding-bottom: 7px;
             
                 .item {
                     border: 1px solid rgba(181, 181, 181, 0.5);
@@ -513,7 +525,7 @@ $width: 11em;
                     font-size: 1.2em;
                     width: 55px;
                     height: 55px;
-                    margin: auto 40px;
+                    margin: auto 5px;
                     position: relative;
 
                     &.telegram a, &.linkedin a, &.twitter a, &.instagram a, &.github a {
