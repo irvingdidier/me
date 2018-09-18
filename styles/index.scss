@@ -492,6 +492,10 @@ $width: 11em;
             align-items: center;
             text-align: center;
 
+            .fa, .fab, .fal, .far, .fas {
+                overflow-y: hidden;
+            }
+
             h4 {
                 width: 100%;
                 text-align: center;

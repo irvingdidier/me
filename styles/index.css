@@ -599,6 +599,10 @@ a:hover {
   text-align: center;
 }
 
+.contact .content .contacts .fa, .contact .content .contacts .fab, .contact .content .contacts .fal, .contact .content .contacts .far, .contact .content .contacts .fas {
+  overflow-y: hidden;
+}
+
 .contact .content .contacts h4 {
   width: 100%;
   text-align: center;
