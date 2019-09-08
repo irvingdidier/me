@@ -186,11 +186,6 @@ $width: 11em;
 
 /*************************** END typewritter ***************************/
 .background-colorfull {
-    // background: #3b679e; /* Old browsers */
-    // background: -moz-linear-gradient(left, #3b679e 0%, #2b88d9 57%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
-    // background: -webkit-linear-gradient(left, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-    // background: linear-gradient(to right, #3b679e 0%,#2b88d9 57%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
     background: #384B5D;
     opacity: .9;
     z-index: 1;
@@ -277,19 +272,19 @@ $width: 11em;
 /*************************** START Skills ***************************/
 
 .list {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 180px));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 180px));
+    justify-content: space-around;
     grid-auto-rows: minmax(190px, 210px);
-    grid-gap: 20px;
+    grid-gap: 15px;
+    padding: 15px;
     margin-bottom: 80px;
 }
 
 .skill {
     overflow: hidden;
     position: relative;
-    width: 180px;
+    max-width: 180px;
     height: 210px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -356,8 +351,7 @@ $width: 11em;
             border-radius: 5px;
             border: 1px solid gray;
             @include box-shadow;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            margin: 10px;
 
             .title-siteweb {
                 width: 100%;
@@ -518,9 +512,8 @@ $width: 11em;
                 margin-top: 50px;
                 width: 100%;
                 display: flex;
-                padding: 0 20px;
+                padding: 15px 20px;
                 justify-content: space-around;
-                padding-bottom: 7px;
             
                 .item {
                     border: 1px solid rgba(181, 181, 181, 0.5);

@@ -180,3 +180,47 @@
         width: 390px;
     }
 }
+
+@media only screen and (min-width: 100px) and (max-width: 430px) {
+
+    .line-1{
+        font-size: 1.9rem;
+    }
+
+    .typewritter {
+        width: 350px;
+    }
+
+    .list {
+        grid-template-columns: repeat(auto-fill, 150px);
+        justify-content: space-around;
+        grid-gap: 10px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .skill {
+        overflow: hidden;
+        max-width: 150px;
+        height: 180px;
+    }
+
+    .skills .list .skill .img-skill {
+        height: 145px;
+    }
+
+    .skill-text {
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .portafolio {
+
+        .content {
+
+            .info-siteweb {
+                font-size: .75em;
+            }
+        }
+    }
+}
