@@ -328,7 +328,7 @@ a:hover {
 }
 
 .container {
-  padding: 40px 70px;
+  padding: 40px 10%;
 }
 
 .skills, .experience, .portafolio, .contact {
