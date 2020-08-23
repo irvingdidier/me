@@ -1,6 +1,6 @@
 
 
-@import "lib/utils";
+@import 'lib/utils';
 
 * {
     box-sizing: border-box;
@@ -9,6 +9,7 @@
 
 html {
     width: 100%;
+    height: 100%;
 }
 
 body {
@@ -52,24 +53,28 @@ body {
         padding: 0;
         margin: 15px 0;
     }
-} 
+}
+
+.pointer {
+    cursor: pointer;
+}
 
 /*************************** START nav ***************************/
 
 .navbar {
+    width: 100%;
+    color: white;
     position: fixed;
     top: 0;
-    width: 100%;
     background: rgba(1, 1, 1, 0.9);
     @include box-shadow;
-    color: white;
     height: 64px;
-    flex-wrap: nowrap;
     z-index: 10;
     display: flex;
 
     .my-name {
-        flex-grow: 1;
+        width: 180px;
+        height: 100%;
         font-size: 1.3em;
         display: flex;
         align-items: center;
@@ -78,10 +83,14 @@ body {
     a {
         text-decoration: none;
         color: white;
+
+        &:hover {
+            font-size: inherit;
+        }
     }
 
     .menu {
-        width: 80%;
+        width: 100%;
         height: 100%;
         margin: 0 auto;
         padding: 0;
@@ -100,6 +109,38 @@ body {
             text-align: center;
         }
     }
+
+    .container-menu {
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 15px;
+        display: none;
+        
+        .btn-menu, .pointer {
+            cursor: pointer !important;
+            overflow: hidden;
+        }
+        
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        
+        .change .bar2 {opacity: 0;}
+        
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
 }
 
 i {
@@ -108,41 +149,6 @@ i {
 
 /*************************** END nav ***************************/
 
-/*************************** START menu ***************************/
-
-.container-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 15px;
-    display: none;
-}
-
-.btn-menu, .pointer {
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-/*************************** END menu ***************************/
 
 a {
     text-decoration: none;
@@ -151,7 +157,6 @@ a {
 
 a:hover {
     color: $color-third;
-    font-size: 1.02em;
 }
 
 /*************************** START typewritter ***************************/
@@ -186,14 +191,15 @@ $width: 11em;
 
 /*************************** END typewritter ***************************/
 .background-colorfull {
-    background: #384B5D;
-    opacity: .9;
+    background: rgba(44, 65, 78, .9);
+    // opacity: .9;
     z-index: 1;
     @include position-absolute;
 }
 
 .hero {
     height: 600px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,12 +241,13 @@ $width: 11em;
 }
 
 .btn {
+    width: auto;
+    height: 50px;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    width: auto;
     padding: 10px 25px;
     margin: 5px;
     @include box-shadow;
@@ -248,7 +255,6 @@ $width: 11em;
 
 .btn:hover {
     color: #003560;
-    font-size: 1.02em;
 }
 
 .btn.btn-primary {
@@ -340,9 +346,9 @@ $width: 11em;
 
     .content {
         display: grid;
-        grid-template-columns: repeat(2, minmax(500px, 700px));
-        grid-auto-rows: 500px;
-        grid-gap: 30px;
+        grid-template-columns: repeat(3, minmax(300px, 500px));
+        grid-auto-rows: 350px;
+        grid-gap: auto;
         justify-content: center;
 
         .content-portafolio {
@@ -355,7 +361,6 @@ $width: 11em;
 
             .title-siteweb {
                 width: 100%;
-                height: 13%;
                 display: flex;
                 padding: 10px;
                 justify-content: flex-start;
@@ -378,7 +383,7 @@ $width: 11em;
 
             .info-siteweb {
                 width: 100%;
-                height: 13%;
+                height: 20%;
                 display: flex;
                 padding: 10px;
                 justify-content: flex-start;
@@ -387,11 +392,15 @@ $width: 11em;
 
                 .badge {
                     border: 1px solid $color-secondary;
+                    height: 32px;
+                    overflow: hidden;
                     border-radius: 5px;
                     color: $color-secondary;
                     font-size: .75em;
                     padding: 5px;
                     margin: 5px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
             }
         }

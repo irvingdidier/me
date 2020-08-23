@@ -5,7 +5,7 @@ $color-yellow: yellow;
 $color-back : #ff007f;
 
 @mixin box-shadow {
-    box-shadow: 0 3px 10px 0px rgba(1, 1, 1, .4);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 @mixin position-absolute {
