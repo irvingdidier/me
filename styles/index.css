@@ -247,7 +247,6 @@ a:hover {
 }
 
 .hero {
-  height: 600px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
